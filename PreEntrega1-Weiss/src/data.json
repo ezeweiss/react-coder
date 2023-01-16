@@ -1,0 +1,26 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "LIFTING CON DMAE",
+        "picture": "/src/assets/pics/Lift.jpg",
+        "description": "El DMAE es un activo natural de efecto tensor. Mejora la elasticidad y la firmeza de la piel" ,
+        "precio": "$1500"
+      },
+      {
+        "id": 2,
+        "name": "BIO SERUM CON NIACINAMIDA",
+        "picture": "/src/assets/pics/Bio.jpg",
+        "description": "mejora la función barrera de la piel y la hidratación. Reduce el enrojecimiento y la sensibilidad. Controla la producción de sebo, incrementa la producción de colágeno, es antioxidante y disminuye visiblemente las líneas de expresión.",
+        "precio": "$2500"
+      },
+      {
+        "id": 3,
+        "name": "CREMA PARA MASAJES",
+        "picture": "/src/assets/pics/Crema.jpg",
+        "description": "Crema base para todo tipo de masaje corporal, facilita el trabajo manual, sin dejar oleosidad",
+        "precio": "$2000"
+      }
+    ]
+
+}
