@@ -10,11 +10,13 @@ const NavBar = () => {
           <Navbar.Brand href="/">GB Beauty Shop</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/productos">Catálogo</Nav.Link>
+            <Nav.Link href="/antiage">Anti Age</Nav.Link>
+            <Nav.Link href="/limpieza">Limpieza Facial</Nav.Link>
             <Nav.Link href="/nosotros">Nosotros</Nav.Link>
             <Nav.Link href="/contacto">Contacto</Nav.Link>
             <Nav.Link className="" href="/carrito">0<CartWidget /></Nav.Link>
           </Nav>
+
         </Container>
     </Navbar>
     </>

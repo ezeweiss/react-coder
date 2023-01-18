@@ -1,25 +1,37 @@
 {
-    "products": [
+    "antiage": [
       {
-        "id": 1,
-        "name": "LIFTING CON DMAE",
-        "picture": "/src/assets/pics/Lift.jpg",
-        "description": "El DMAE es un activo natural de efecto tensor. Mejora la elasticidad y la firmeza de la piel" ,
+        "id": "1",
+        "name": "Anti Stress Dérmico",
+        "picture": "/src/assets/pics/Anti-stress.jpg",
+        "description": "Reduce significativamente la sensación de ardor y escozor causada por los peeling ácidos" ,
         "precio": "$1500"
       },
       {
-        "id": 2,
+        "id": "2",
         "name": "BIO SERUM CON NIACINAMIDA",
         "picture": "/src/assets/pics/Bio.jpg",
-        "description": "mejora la función barrera de la piel y la hidratación. Reduce el enrojecimiento y la sensibilidad. Controla la producción de sebo, incrementa la producción de colágeno, es antioxidante y disminuye visiblemente las líneas de expresión.",
+        "description": "mejora la función barrera de la piel y la hidratación. ",
         "precio": "$2500"
-      },
+      }
+    ],
+
+    "limpieza": [
+
       {
-        "id": 3,
-        "name": "CREMA PARA MASAJES",
-        "picture": "/src/assets/pics/Crema.jpg",
-        "description": "Crema base para todo tipo de masaje corporal, facilita el trabajo manual, sin dejar oleosidad",
-        "precio": "$2000"
+        "id": "3",
+        "name": "Agua Micelar",
+        "picture": "/src/assets/pics/Micelar.jpg",
+        "description": "Sus agentes de hidratación mantienen el equilibrio de la piel, evitando la deshidratación y la tirantez, sin dejar oleosidad." ,
+        "precio": "$1800"
+      },
+
+      {
+        "id": "4",
+        "name": "Leche de Limpieza Descongestiva",
+        "picture": "/src/assets/pics/Leche-Limpieza.jpg",
+        "description": "Máximo poder limpiador. No provoca enrojecimiento en la piel. Logra el equilibrio natural de la piel." ,
+        "precio": "$1800"
       }
     ]
 
