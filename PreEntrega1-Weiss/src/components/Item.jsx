@@ -1,30 +1,46 @@
-import React from 'react'
-import { Button, Card, CardGroup, Col, Container, Row} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import {
+  Card,
+  CardBody,
+  Heading,
+  Image,
+  Stack,
+  Text,
+  CardFooter,
+  ButtonGroup,
+  Button,
+  Divider,
+} from "@chakra-ui/react";
+import { NavLink } from "react-router-dom";
+const Item = ({ id, image, title, description, price }) => {
+  return (
+    <div className="App">
+      <Card maxW="sm">
+        <CardBody>
+            <Image src={image} alt={title} title={title} borderRadius="lg" />
+          <Stack mt="6" spacing="3">
+            <Heading size="md">{title}</Heading>
+            <Text>{description}</Text>
+            <Text color="blue.600" fontSize="2xl">
+              ${price}
+            </Text>
+          </Stack>
+        </CardBody>
+        <Divider />
+        <CardFooter>
+          <ButtonGroup spacing="2">
+            <Button variant="solid" colorScheme="blue">
+            <NavLink to={`/product/${id - 1}`}>
+              See detail
+            </NavLink>
+            </Button>
+            <Button variant="ghost" colorScheme="blue">
+              Add to cart
+            </Button>
+          </ButtonGroup>
+        </CardFooter>
+      </Card>
+    </div>
+  );
+};
 
-
-const Item = function ({ id,name, description, precio, picture }) {
-    return (
-  
-<Row className="g-4">
-{Array.from({ length: 4 }).map((_, idx) => (
-  <Col>
-    <Card>
-      <Card.Img variant="top" src={picture} />
-      <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text>
-          {description}
-        </Card.Text>
-        <Card.Subtitle>{precio}</Card.Subtitle>
-        <Link to={`${id}`}><Button variant="warning">Ver detalle</Button></Link>
-        <Button variant="primary">Agregar al carrito</Button>
-      </Card.Body>
-    </Card>
-  </Col>
-))}
-</Row>
-    );
-  };
-
-export default Item
+export default Item;
