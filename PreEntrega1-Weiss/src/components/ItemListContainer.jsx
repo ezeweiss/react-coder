@@ -1,31 +1,53 @@
-import { Card, CardBody, Divider, Image, Stack, Text } from '@chakra-ui/react'
+import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
 import React from 'react'
+import { useLocation } from 'react-router-dom';
+import Item from './Item';
 
-const ItemListContainer = ({greeting}) => {
+function ItemListContainer({ products, greeting }) {
+  const mapCategories = {
+    women: "women's clothing",
+    men: "men's clothing",
+    jewelery: "jewelery",
+    electronic: "electronics",
+  };
+
+  const category = useLocation().pathname.split("/")[1] || "all";
+  const stateCategory = mapCategories[category] || "all";
+
   return (
-    <div>
-      {/* <Card>
-        <CardBody>
-          <Text>{greeting}</Text>
-        </CardBody>
-      </Card> */}
-      <Card maxW='sm'>
-  <CardBody>
-    <Image
-      src='https://www.cronica.com.ar/__export/1602295346282/sites/cronica/img/2020/10/09/homero1_crop1602295019493.jpg_1902800913.jpg'
-      alt='Green double couch with wooden legs'
-      borderRadius='lg'
-    />
-    <Stack mt='6' spacing='3'>
-      <Text>
-        {greeting}
-      </Text>
-    </Stack>
-  </CardBody>
-  <Divider />
-</Card>
-    </div>
-  )
+    <>
+      <Box textAlign="center">
+        <Heading
+          as="h1"
+          color="blue.400"
+          fontSize="2xl"
+          fontWeight="bold"
+          lineHeight="tall"
+          letterSpacing="wide"
+          textAlign="center"
+        >
+          {greeting}
+        </Heading>
+      </Box>
+      <SimpleGrid minChildWidth="250px" spacing="20px" m="6">
+        {products
+          .filter(
+            (product) =>
+              product.category === stateCategory ||
+              stateCategory === "all"
+          )
+          .map((product) => (
+            <Item
+              id={product.id}
+              image={product.image}
+              title={product.title}
+              description={product.description}
+              price={product.price}
+            />
+          ))}
+      </SimpleGrid>
+    </>
+  );
 }
 
-export default ItemListContainer
+export default ItemListContainer;
